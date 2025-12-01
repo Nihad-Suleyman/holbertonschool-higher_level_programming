@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import calculator_1.py
+from calculator_1.py import all
 if __name__ == "__main__":
     a = 10
     b = 5
