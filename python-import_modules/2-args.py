@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for i in range(len(argv)):
-    print("{}: {}".format(i + 1, argv[i])
+if __name__ == "__main__": 
+    for i in range(len(argv)):
+        print("{}: {}".format(i + 1, argv[i])
