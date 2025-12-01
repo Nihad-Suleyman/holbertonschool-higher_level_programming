@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-__main__
-__name__
+
 def add(a, b):
     return (a + b)
-print("{}".format(add(a, b)))
+if "__name__" == "__main__":
+    a = 1
+    b = 2
+    print("{} + {} = {}".format(a, b, add(a, b)))
