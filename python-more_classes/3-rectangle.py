@@ -46,7 +46,6 @@ class Rectangle:
 
     def my_print(self):
         if self.__height == 0 or self.__width == 0:
-            print('')
-            return
-        for _ in range(self.__width):
-            print("#" * self.__height)
+            return ""
+        for _ in range(self.__height):
+            rectangle_s.append("#" * self.__width)
