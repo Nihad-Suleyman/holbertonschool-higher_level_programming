@@ -47,5 +47,7 @@ class Rectangle:
     def my_print(self):
         if self.__height == 0 or self.__width == 0:
             return ""
+        rectangle_s = []
         for _ in range(self.__height):
             rectangle_s.append("#" * self.__width)
+        return "\n".join(rectangle_s)
