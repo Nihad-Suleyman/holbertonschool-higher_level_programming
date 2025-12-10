@@ -2,4 +2,5 @@
 """we will create a function of simple list for task 1"""
 
 def lookup(obj):
+    """returning a list"""
     return []
