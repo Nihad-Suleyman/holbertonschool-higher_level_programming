@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"let's create a class"""
+"let's create a class called Mylist"""
 
 
-class Mylist(list):
+class MyList(list):
     """done"""
     def print_sorted(self):
         """another deocumentation"""
