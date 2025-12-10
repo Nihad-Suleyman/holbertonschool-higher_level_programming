@@ -66,5 +66,6 @@ class Rectangle:
             rectangle_lines.append("#" * self.__width)
 
         return "\n".join(rectangle_lines)
+
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
