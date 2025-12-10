@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 ''' first document for general'''
 
+
 class Rectangle:
     '''inside class document'''
     def __init__(self, width=0, height=0):
-        # Using setters for validation (assuming the fix from previous interaction is applied)
+        # Using setters for validation
         self.width = width
         self.height = height
 
