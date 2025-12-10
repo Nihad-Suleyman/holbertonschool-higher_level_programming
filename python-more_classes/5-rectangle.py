@@ -8,8 +8,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    # --- (width and height properties and setters are here) ---
-
     @property
     def width(self):
         return self.__width
@@ -33,8 +31,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
-    # --- (area, perimeter, __str__, __repr__ methods are here) ---
 
     def area(self):
         return self.__height * self.__width
@@ -53,7 +49,6 @@ class Rectangle:
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
 
-    # --- **NEW: The Destructor Method** ---
     def __del__(self):
         """Prints a message when the instance is deleted/garbage collected."""
         print("Bye rectangle...")
