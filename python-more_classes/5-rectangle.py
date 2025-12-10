@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 ''' first document for general'''
 
-
 class Rectangle:
     '''inside class document'''
     def __init__(self, width=0, height=0):
+        # Using setters for validation (assuming the fix from previous interaction is applied)
         self.width = width
         self.height = height
 
+    # --- (width and height properties and setters are here) ---
+
     @property
     def width(self):
-        """okay this one should be complete"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """this one will also work"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -24,17 +24,17 @@ class Rectangle:
 
     @property
     def height(self):
-        """okay this one should be complete"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """this one will also work"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+    
+    # --- (area, perimeter, __str__, __repr__ methods are here) ---
 
     def area(self):
         return self.__height * self.__width
@@ -44,33 +44,16 @@ class Rectangle:
             return 0
         return (self.__height + self.__width) * 2
 
-    def my_print(self):
-        if self.__height == 0 or self.__width == 0:
-            print('')
-            return
-        for _ in range(self.__width):
-            print("#" * self.__height)
-
     def __str__(self):
-        """
-        Returns a string representation of the rectangle using '#' characters,
-        or an empty string if width or height is 0.
-        """
         if self.__width == 0 or self.__height == 0:
             return ""
-
-        rectangle_lines = []
-        for i in range(self.__height):
-            # Each line has a length equal to the width
-            # The character used is '#'
-            rectangle_lines.append("#" * self.__width)
-
+        rectangle_lines = ["#" * self.__width for i in range(self.__height)]
         return "\n".join(rectangle_lines)
-        
-  def __repr__(self):
-      """for task 4"""
+
+    def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
 
-  def __del__(self):
-      """for task 5"""
-      print("Bye rectangle...")
+    # --- **NEW: The Destructor Method** ---
+    def __del__(self):
+        """Prints a message when the instance is deleted/garbage collected."""
+        print("Bye rectangle...")
