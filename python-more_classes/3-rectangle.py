@@ -45,13 +45,12 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     def my_print(self):
-        # This method uses 'print', but for __str__ we need to 'return' the string
         if self.__height == 0 or self.__width == 0:
             print('')
             return
         for _ in range(self.__width):
             print("#" * self.__height)
-    
+
     def __str__(self):
         """
         Returns a string representation of the rectangle using '#' characters,
@@ -60,12 +59,10 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        # Create a list of lines, where each line is 'width' '#' characters long
         rectangle_lines = []
         for i in range(self.__height):
             # Each line has a length equal to the width
             # The character used is '#'
             rectangle_lines.append("#" * self.__width)
 
-        # Join the lines with a newline character to form the final string
         return "\n".join(rectangle_lines)
