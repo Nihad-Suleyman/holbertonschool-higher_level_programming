@@ -68,7 +68,9 @@ class Rectangle:
         return "\n".join(rectangle_lines)
         
   def __repr__(self):
+      """for task 4"""
         return f"Rectangle({self.width}, {self.height})"
 
   def __del__(self):
+      """for task 5"""
       print("Bye rectangle...")
