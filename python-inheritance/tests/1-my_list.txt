@@ -11,3 +11,13 @@
 [1, 2, 3, 4, 5]
 >>> print(my_list)
 [1, 4, 2, 3, 5]
+>>> MyList = __import__('1-my_list').MyList
+
+>>> empty = MyList()
+>>> print(empty)
+[]
+>>> empty.print_sorted()
+[]
+>>> print(empty)
+[]
+
