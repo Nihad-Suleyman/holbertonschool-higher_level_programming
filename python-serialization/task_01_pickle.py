@@ -5,19 +5,19 @@
 import pickle
 
 class CustomObject:
-    def __init__(name, age, is_student):
+    def __init__(name="", age=0, is_student=False):
         self.name = name
         self.age = age
         self.is_student = is_student
 
     def display():
-        print(f"Name:$name\nAge: $age\nIs Student: $is_student")
+        print(f"Name:{self.name}\nAge: {self.age}\nIs Student: {self.is_student}")
 
     def serialize(self, filename):
         with open("data.pkl", "wb") as file:
-            pickle.dump(data, file)
+            pickle.dump(self, file)
 
     @classmethod
     def deserialize(cls, filename):
-        with open("data.pkl", "wr") as file:
+        with open("data.pkl", "rb") as file:
             pickle.load(file)
