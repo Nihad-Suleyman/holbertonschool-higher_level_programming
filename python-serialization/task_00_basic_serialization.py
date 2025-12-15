@@ -4,9 +4,9 @@
 
 import json
 def serialize_and_save_to_file(data, filename):
-    with open(filename, "w", encoding="utf-8") as f:
+    with open(filename, "w") as f:
         json.dumps(f, data)
 
 def load_and_deserialize(filename):
-    with open(filename, "r", encoding="utf-8") as f:
+    with open(filename, "r") as f:
         return json.loads(f.read())
