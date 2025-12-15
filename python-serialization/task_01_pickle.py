@@ -15,7 +15,7 @@ class CustomObject:
 
     def serialize(self, filename):
         try:
-            with open("data.pkl", "wb") as file:
+            with open(filename, "wb") as file:
                 pickle.dump(self, file)
         except:
             return None
@@ -23,7 +23,7 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         try:
-            with open("data.pkl", "rb") as file:
+            with open(filename, "rb") as file:
                 data = pickle.load(file)
         except:
             return None
