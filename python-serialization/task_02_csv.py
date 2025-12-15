@@ -2,7 +2,7 @@
 """now let's change from csv to json"""
 
 
-python import csv import json
+import csv, json
 
 def convert_csv_to_json(filename):
     try:
