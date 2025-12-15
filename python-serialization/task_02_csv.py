@@ -2,7 +2,8 @@
 """now let's change from csv to json"""
 
 
-import csv, json
+import csv
+import json
 
 def convert_csv_to_json(filename):
     try:
